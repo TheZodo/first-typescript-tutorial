@@ -12,4 +12,11 @@ const logMsg = (message) => {
 };
 logMsg("Hello");
 logMsg(add(2, 3));
-logMsg(add('a ', 3));
+logMsg(add(7, 3));
+let subtract = function (c, d) {
+    return c - d;
+};
+let multiply = function (c, d) {
+    return c * d;
+};
+console.log(multiply(2, 3));

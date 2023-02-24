@@ -30,4 +30,17 @@ const logMsg = (message:any): void =>{
 
 logMsg("Hello");
 logMsg(add(2,3));
-logMsg(add('a ',3));
+logMsg(add(7,3));
+
+let subtract = function (c: number, d: number): number{
+  return c - d;
+}
+
+// type MathFunc = (a: number, b: number) => number;
+interface MathFunc {(a: number, b: number):number;}
+
+let multiply: MathFunc = function (c,d){
+  return c * d;
+}
+
+console.log(multiply(2,3));
