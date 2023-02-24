@@ -34,8 +34,21 @@ let JP: Guitarist = {
 evh = JP
 
 const greetGuitarist = (guitarist: Guitarist) => {
-  console.log(`Hello ${guitarist.name}`)
-  return `Hello ${guitarist.name?.toUpperCase()}`
+  if(guitarist.name){
+    return `Hello ${guitarist.name.toUpperCase()}`
+  }
+  return 'Hello'
 }
 
 console.log(greetGuitarist(evh))
+
+// Enums
+enum Grade{
+  U = 1,
+  D,
+  C,
+  B,
+  A
+}
+
+console.log(Grade.U)
