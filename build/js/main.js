@@ -18,3 +18,6 @@ let nextVal = addOrConcat(2, 2, 'concat');
 //The Dom
 const img = document.querySelector('img');
 const myImg = document.getElementById('#img');
+const nextImg = document.getElementById('#img');
+img.src;
+myImg.src;
