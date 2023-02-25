@@ -15,3 +15,4 @@ const addOrConcat = (a, b, c) => {
 let myVal = addOrConcat(2, 2, "concat");
 //be careful
 let nextVal = addOrConcat(2, 2, "concat");
+//The Dom

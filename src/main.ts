@@ -25,3 +25,5 @@ let myVal: string = addOrConcat(2, 2, "concat") as string;
 
 //be careful
 let nextVal: number = addOrConcat(2, 2, "concat") as number;
+
+//The Dom
