@@ -27,3 +27,4 @@ let myVal: string = addOrConcat(2, 2, "concat") as string;
 let nextVal: number = addOrConcat(2, 2, "concat") as number;
 
 //The Dom
+const img = document.querySelector("img") as HTMLImageElement;

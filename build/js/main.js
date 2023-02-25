@@ -16,3 +16,4 @@ let myVal = addOrConcat(2, 2, "concat");
 //be careful
 let nextVal = addOrConcat(2, 2, "concat");
 //The Dom
+const img = document.querySelector("img");
