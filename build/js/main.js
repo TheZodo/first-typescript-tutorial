@@ -1,60 +1,23 @@
 "use strict";
-class Coder {
-    constructor(name, music, age, lang = 'TypeScript') {
-        this.name = name;
-        this.music = music;
-        this.age = age;
-        this.lang = lang;
-        this.name = name;
-        this.music = music;
-        this.age = age;
-        this.lang = lang;
+// interface TransactionObj {
+//   Pizza: number
+//   Books: number
+//   Job: number
+// }
+const todaysTransactions = {
+    Pizza: 10,
+    Books: 5,
+    Job: 1,
+};
+console.log(todaysTransactions.Pizza);
+console.log(todaysTransactions['Pizza']);
+let prop = 'Pizza';
+console.log(todaysTransactions[prop]);
+const todaysNet = (transactions) => {
+    let total = 0;
+    for (const transaction in transactions) {
+        total += transactions[transaction];
     }
-    getAge() {
-        return this.age;
-    }
-}
-const Malaizyo = new Coder('Malaizyo', 'Rap', 20, 'JavaScript');
-console.log(Malaizyo.getAge());
-// console.log(Malaizyo.lang)
-// console.log(Malaizyo.age)
-class WebDev extends Coder {
-    constructor(computer, name, music, age) {
-        super(name, music, age);
-        this.computer = computer;
-        this.name = name;
-        this.computer = computer;
-    }
-    getLang() {
-        return `I'm a ${this.lang} developer`;
-    }
-}
-const Sara = new WebDev('MacBook', 'Sara', 'Pop', 20);
-console.log(Sara.getLang());
-class Peeps {
-    static getCount() {
-        return Peeps.count;
-    }
-    constructor(name) {
-        this.name = name;
-        this.id = ++Peeps.count;
-    }
-}
-Peeps.count = 0;
-const Zodo = new Peeps('Zodo');
-const Zozo = new Peeps('Zozo');
-const Koko = new Peeps('Koko');
-console.log(Peeps.getCount());
-class Bands {
-    constructor() {
-        this.dataState = [];
-    }
-    get data() {
-        return this.dataState;
-    }
-    set data(value) {
-        if (Array.isArray(value) && value.every((el) => typeof el === 'string'))
-            this.dataState = value;
-        return;
-    }
-}
+    return total;
+};
+console.log(todaysNet(todaysTransactions));
