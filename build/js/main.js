@@ -52,4 +52,9 @@ class Bands {
     get data() {
         return this.dataState;
     }
+    set data(value) {
+        if (Array.isArray(value) && value.every((el) => typeof el === 'string'))
+            this.dataState = value;
+        return;
+    }
 }

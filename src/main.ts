@@ -71,4 +71,10 @@ class Bands {
   public get data(): string[] {
     return this.dataState
   }
+
+  public set data(value: string[]) {
+    if (Array.isArray(value) && value.every((el) => typeof el === 'string'))
+      this.dataState = value
+    return
+  }
 }
