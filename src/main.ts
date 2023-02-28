@@ -17,3 +17,11 @@ const isTrue = <T>(arg: T): { arg: T; is: boolean } => {
   }
   return { arg, is: !!arg }
 }
+
+console.log(isTrue(false))
+console.log(isTrue(0))
+console.log(isTrue(true))
+console.log(isTrue(1))
+console.log(isTrue('dave'))
+console.log(isTrue(''))
+console.log(isTrue(null))
