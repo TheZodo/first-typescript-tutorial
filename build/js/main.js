@@ -45,3 +45,10 @@ console.log(processUser({ id: '123', name: 'John', age: 30 }));
 const getUsersProperty = (user, key) => {
     return user.map((user) => user[key]);
 };
+class User {
+    constructor(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+}
