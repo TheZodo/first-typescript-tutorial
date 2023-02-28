@@ -32,3 +32,16 @@ console.log(isTrue([]))
 console.log(isTrue([1, 2, 3]))
 console.log(NaN)
 console.log(isTrue(-0))
+
+interface BoolCheck<T> {
+  value: T
+  is: boolean
+}
+
+const checkBoolValue = <T>(arg: T): { arg: T; is: boolean } => {
+  if (Array.isArray(arg) && !arg.length) return { arg, is: false }
+  if (isObj(arg) && !Object.keys(arg as keyof T).length) {
+    return { arg, is: false }
+  }
+  return { arg, is: !!arg }
+}
