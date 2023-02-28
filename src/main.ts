@@ -77,3 +77,27 @@ const score: AssignResult = {
 }
 
 type AssignPreview = Omit<Assignment, 'verified' | 'grade'>
+
+const preview: AssignPreview = {
+  studentId: '123',
+  title: 'Assignment 1',
+}
+
+//exclude and extract
+
+type adjustedGrade = Exclude<LetterGrades, 'U'>
+
+type highGrades = Extract<LetterGrades, 'A' | 'B'>
+
+//NonNullable
+
+type AllGrades = 'Dave' | 'John' | null | undefined
+type NamesOnly = NonNullable<AllGrades>
+type newAssign = { title: string; points: number }
+
+const createNewAssign = (title: string, points: number): newAssign => {
+  return { title, points }
+  //do something
+}
+
+type newLearnAssign = ReturnType<typeof createNewAssign>

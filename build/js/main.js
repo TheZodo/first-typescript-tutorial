@@ -38,3 +38,11 @@ const score = {
     studentId: '123',
     grade: 100,
 };
+const preview = {
+    studentId: '123',
+    title: 'Assignment 1',
+};
+const createNewAssign = (title, points) => {
+    return { title, points };
+    //do something
+};
