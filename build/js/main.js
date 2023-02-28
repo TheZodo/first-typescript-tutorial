@@ -1,9 +1,4 @@
 "use strict";
-// interface TransactionObj {
-//   Pizza: number
-//   Books: number
-//   Job: number
-// }
 const todaysTransactions = {
     Pizza: 10,
     Books: 5,
@@ -21,3 +16,7 @@ const todaysNet = (transactions) => {
     return total;
 };
 console.log(todaysNet(todaysTransactions));
+const student = {
+    name: 'John',
+    GPA: 3.5,
+};

@@ -1,11 +1,12 @@
+// interface TransactionObj {
+//   [index: string]: number
+// }
 interface TransactionObj {
   [index: string]: number
+  Pizza: number
+  Books: number
+  Job: number
 }
-// interface TransactionObj {
-//   Pizza: number
-//   Books: number
-//   Job: number
-// }
 
 const todaysTransactions: TransactionObj = {
   Pizza: 10,
@@ -29,3 +30,22 @@ const todaysNet = (transactions: TransactionObj): number => {
 }
 
 console.log(todaysNet(todaysTransactions))
+
+interface Student {
+  name: string
+  GPA: number
+  classes?: number[]
+}
+
+const student: Student = {
+  name: 'John',
+  GPA: 3.5,
+}
+
+// interface Incomes {
+//   [key: string]: number
+// }
+
+type Streams = 'sakary' | 'bonus' | 'sidehustle'
+
+type Incomes = Record<Streams, number>
