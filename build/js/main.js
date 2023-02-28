@@ -32,9 +32,9 @@ console.log(NaN);
 console.log(isTrue(-0));
 const checkBoolValue = (arg) => {
     if (Array.isArray(arg) && !arg.length)
-        return { arg, is: false };
+        return { value: arg, is: false };
     if (isObj(arg) && !Object.keys(arg).length) {
-        return { arg, is: false };
+        return { value: arg, is: false };
     }
-    return { arg, is: !!arg };
+    return { value: arg, is: !!arg };
 };
