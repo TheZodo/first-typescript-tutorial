@@ -49,3 +49,5 @@ const student: Student = {
 type Streams = 'sakary' | 'bonus' | 'sidehustle'
 
 type Incomes = Record<Streams, number>
+
+console.log('hello')

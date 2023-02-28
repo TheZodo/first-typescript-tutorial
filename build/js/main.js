@@ -20,3 +20,4 @@ const student = {
     name: 'John',
     GPA: 3.5,
 };
+console.log('hello');
