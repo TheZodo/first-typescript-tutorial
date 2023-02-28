@@ -8,3 +8,10 @@ console.log(isObj('string'));
 console.log(isObj([1, 2, 3]));
 console.log(isObj({ name: 'John' }));
 console.log(isObj(null));
+const isTrue = (arg) => {
+    if (Array.isArray(arg) && !arg.length)
+        return { arg, is: false };
+    if (isObj(arg) && !Object.keys(arg).length)
+        return { arg, is: false };
+    return { arg, is: !!arg };
+};
