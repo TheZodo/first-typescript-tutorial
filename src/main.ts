@@ -1,4 +1,11 @@
 const echo = <T>(arg: T): T => arg
 
-const isObj = <T>(arg: T): boolean =>
-  typeof arg === 'object' && Array.isArray(arg) === false
+const isObj = <T>(arg: T): boolean => {
+  return typeof arg === 'object' && Array.isArray(arg) === false && arg !== null
+}
+
+console.log(isObj(true))
+console.log(isObj('string'))
+console.log(isObj([1, 2, 3]))
+console.log(isObj({ name: 'John' }))
+console.log(isObj(null))
