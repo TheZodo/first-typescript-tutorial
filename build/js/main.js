@@ -1,2 +1,2 @@
 "use strict";
-const stringEcho = (arg) => arg;
+const echo = (arg) => arg;
