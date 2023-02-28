@@ -38,3 +38,7 @@ const checkBoolValue = (arg) => {
     }
     return { value: arg, is: !!arg };
 };
+const processUser = (user) => {
+    return user;
+};
+console.log(processUser({ id: '123', name: 'John', age: 30 }));
