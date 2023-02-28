@@ -42,3 +42,6 @@ const processUser = (user) => {
     return user;
 };
 console.log(processUser({ id: '123', name: 'John', age: 30 }));
+const getUsersProperty = (user, key) => {
+    return user.map((user) => user[key]);
+};
