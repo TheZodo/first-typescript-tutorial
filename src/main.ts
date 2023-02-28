@@ -95,9 +95,13 @@ type AllGrades = 'Dave' | 'John' | null | undefined
 type NamesOnly = NonNullable<AllGrades>
 type newAssign = { title: string; points: number }
 
-const createNewAssign = (title: string, points: number): newAssign => {
-  return { title, points }
+const createNewAssign = (title: string, points: number) => {
+  return { title, points, hater: 'Dave' }
   //do something
 }
 
 type newLearnAssign = ReturnType<typeof createNewAssign>
+
+//Parameters
+
+type newAssignParams = Parameters<typeof createNewAssign>

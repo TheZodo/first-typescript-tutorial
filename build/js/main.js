@@ -43,6 +43,6 @@ const preview = {
     title: 'Assignment 1',
 };
 const createNewAssign = (title, points) => {
-    return { title, points };
+    return { title, points, hater: 'Dave' };
     //do something
 };
